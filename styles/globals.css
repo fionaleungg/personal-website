@@ -75,3 +75,8 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+.typed-cursor {
+  color: rgba(248, 107, 223, 1); /* Tailwind pink-500 */
+  font-weight: 600;
+}

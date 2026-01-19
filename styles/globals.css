@@ -80,3 +80,18 @@ body {
   color: rgba(248, 107, 223, 1); /* Tailwind pink-500 */
   font-weight: 600;
 }
+
+.resume-wrapper {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  min-height: 80vh;        /* leave some space for navbar */
+  width: 100%;
+}
+
+.resume-image {
+  max-width: 100%;   /* make it bigger */
+  max-height: 90vh; /* constrain to viewport height */
+  object-fit: contain;
+  display: block;
+}

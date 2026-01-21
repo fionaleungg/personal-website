@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useTheme } from "next-themes";
 
 const Cursor = () => {
   const { theme } = useTheme();
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
   const [mounted, setMounted] = useState(false);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Spring smoothing
+  const x = useSpring(mouseX, { stiffness: 300, damping: 25 });
+  const y = useSpring(mouseY, { stiffness: 300, damping: 25 });
 
   useEffect(() => {
     setMounted(true);
 
     const move = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      mouseX.set(e.clientX - 15);
+      mouseY.set(e.clientY - 15);
     };
 
     const addPointer = () => setIsPointer(true);
@@ -32,7 +39,7 @@ const Cursor = () => {
         el.removeEventListener("mouseleave", removePointer);
       });
     };
-  }, []);
+  }, [mouseX, mouseY]);
 
   if (!mounted) return null;
 
@@ -41,18 +48,9 @@ const Cursor = () => {
   return (
     <motion.div
       className="custom-cursor"
-      animate={{
-        x: position.x - 15,
-        y: position.y - 15,
-        scale: isPointer ? 2 : 1,
-        opacity: isPointer ? 0.6 : 1,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 25,
-      }}
       style={{
+        x,
+        y,
         position: "fixed",
         top: 0,
         left: 0,
@@ -63,6 +61,8 @@ const Cursor = () => {
         pointerEvents: "none",
         zIndex: 9999,
         mixBlendMode: theme === "dark" ? "difference" : "normal",
+        scale: isPointer ? 2 : 1,
+        opacity: isPointer ? 0.6 : 1,
       }}
     />
   );

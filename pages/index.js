@@ -160,7 +160,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Projects */}
+        {/* Projects
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h1 className="ml-0 tablet:ml-4 text-2xl text-bold">
             My Projects.
@@ -176,6 +176,43 @@ export default function Home() {
                 onClick={() => window.open(project.url)}
               />
             ))}
+          </div>
+        </div> */}
+
+        {/* About */}
+        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={aboutRef}>
+          <h1 className="ml-0 tablet:ml-4 text-2xl text-bold">
+            About.
+          </h1>
+
+          <div className="mt-5 tablet:m-10">
+            <div className="flex flex-col laptop:flex-row gap-6 items-start">
+              <div className="w-full laptop:w-2/3">
+                <p className="text-xl laptop:text-2xl leading-relaxed">
+                  {data.aboutpara}
+                </p>
+                <p className="mt-6 text-lg laptop:text-xl leading-relaxed opacity-80">
+                  Interested in seeing what I've been up to? Check out my{" "}
+                  <Link 
+                    href="/blog" 
+                    className="text-[#f86bdf] font-semibold hover:text-[#ff1b6b] transition-colors underline underline-offset-2"
+                  >
+                    Work
+                  </Link>{" "}
+                  page to explore my latest projects and designs!
+                </p>
+              </div>
+
+              <div className="w-full laptop:w-1/3 order-first laptop:order-last">
+                <div className="relative w-48 h-48 laptop:w-64 laptop:h-64 mx-auto rounded-lg overflow-hidden">
+                  <img
+                    src="/images/heart.png"
+                    alt="About me"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -196,41 +233,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Dev-only edit button */}
-        {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
-            </Link>
-          </div>
-        )}
-
-        {/* About */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="ml-0 tablet:ml-4 text-2xl text-bold">
-            About.
-          </h1>
-
-          <div className="mt-5 tablet:m-10">
-            <div className="flex flex-col laptop:flex-row gap-6 items-start">
-              <div className="w-full laptop:w-2/3">
-                <p className="text-xl laptop:text-2xl leading-relaxed">
-                  {data.aboutpara}
-                </p>
-              </div>
-
-              <div className="w-full laptop:w-1/3 order-first laptop:order-last">
-                <div className="relative w-48 h-48 laptop:w-64 laptop:h-64 mx-auto rounded-lg overflow-hidden">
-                  <img
-                    src="/images/heart.png"
-                    alt="About me"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <Footer />
       </div>

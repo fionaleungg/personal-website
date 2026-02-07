@@ -86,8 +86,14 @@ const Work = () => {
                     {project.longDescription}
                   </p>
                 )}
+
+                {project.category === "development" && project.technologies && (
+                  <p className="mt-3 text-sm text-white/80">
+                    <span className="font-semibold">Technologies Used:</span> {project.technologies}
+                  </p>
+                )}
               </div>
-  
+
               <div className="mt-4 flex gap-4">
                 {project.category === "development" && project.github && (
                   <a
@@ -138,7 +144,15 @@ const Work = () => {
         <Header isBlog={true} />
   
         {/* Page content — padded to clear fixed header */}
-        <div className="container mx-auto pt-24 laptop:pt-28 mb-10">
+        <div className="
+          container
+          mx-auto
+          pt-24 laptop:pt-28
+          px-6
+          tablet:px-10
+          laptop:px-0
+        ">
+
           <h1
             ref={text}
             className="mob:p-2 font-bold text-6xl laptop:text-8xl w-full"

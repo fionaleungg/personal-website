@@ -32,6 +32,19 @@
   
     "projects": [
       {
+        "id": "0",
+        "title": "Portfolio",
+        "description": "Personal Portfolio Website",
+        "category": "development",
+        "shortDescription": "",
+        "datePeriod": "Jan 2026 - ???, Living Website!",
+        "longDescription": "The website you're looking at now! A place to showcase my professional growth and personal design signature.",
+        "github": "https://github.com/fionaleungg/personal-website",
+        "technologies": "JavaScript, TailwindCSS, Next.js, Git",
+        "imageSrc": "/images/personal_portfolio.png",
+        "url": "https://github.com/fionaleungg/personal-website"
+      },
+      {
         "id": "1",
         "title": "Extractify",
         "description": "AI/ML Text Extraction",
@@ -40,8 +53,9 @@
         "datePeriod": "Jan 2025 - Mar 2025",
         "longDescription": "Next.js application that uses advanced AI/ML techniques to extract structured data from unstructured conversation text. Provides an intuitive interface for uploading conversation files or inputting text directly to extract key information like email addresses, phone numbers, ZIP codes, and order IDs.",
         "github": "https://github.com/ASAPP1B-BTT-Fall-AI-Studio-2025/ASAPP_MVP",
-        "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?auto=format&fit=crop&w=400&q=60",
-        "url": "http://chetanverma.com/"
+        "technologies": "Python, Jupyter Notebook, TypeScript, Git",
+        "imageSrc": "/images/extractify.png",
+        "url": "https://github.com/ASAPP1B-BTT-Fall-AI-Studio-2025/ASAPP_MVP"
       },
       {
         "id": "2",
@@ -52,8 +66,9 @@
         "datePeriod": "Jan 2025 - Mar 2025",
         "longDescription": "Portfolio Anomaly Detector is a mobile application designed specifically for Hong Kong retail investors who actively trade US/HK stocks. Because the US market trades from 9:30 PM to 4:00 AM Hong Kong time, many investors wake up to large overnight gaps, either painful drawdowns or missed buying opportunities.",
         "github": "https://github.com/aaqwesas/iPAD",
+        "technologies": "Kotlin, Python, Android Studio, Git",
         "imageSrc": "/images/ipad_develop.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://github.com/aaqwesas/iPAD"
       },
       {
         "id": "3",
@@ -64,8 +79,9 @@
         "datePeriod": "Jan 2025 - Mar 2025",
         "longDescription": "Builds an intelligent chatbot that enables non-technical users to query financial data (e.g., trial balances) in plain English. It integrates data preprocessing, semantic entity linking, text-to-SQL generation (via BERT + PICARD), and natural-language answer generation, all in a single neural pipeline.",
         "github": "https://github.com/Pauwels-Xander/Financial-Chatbot",
-        "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?auto=format&fit=crop&w=400&q=60",
-        "url": "http://chetanverma.com/"
+        "technologies": "Python, Git",
+        "imageSrc": "/images/nlp_finchatbot.png",
+        "url": "https://github.com/Pauwels-Xander/Financial-Chatbot"
       },
       {
         "id": "4",
@@ -76,8 +92,9 @@
         "datePeriod": "Jan 2025 - Mar 2025",
         "longDescription": "RoadBuddy is a ride-sharing application designed to connect drivers with passengers traveling in the same direction. Unlike traditional services like Uber, RoadBuddy focuses on drivers who are already planning to travel to a specific destination, allowing them to offer available seats to passengers heading the same way. This approach promotes cost efficiency by enabling passengers to share travel expenses while allowing drivers to earn extra cash on trips they were already planning to take.",
         "github": "https://github.com/trnguyen34/RoadBuddy",
+        "technologies": "TypeScript, Python, HTML/CSS, JavaScript, Git",
         "imageSrc": "/images/roadbuddy_develop.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://github.com/trnguyen34/RoadBuddy"
       },
       {
         "id": "5",
@@ -86,10 +103,11 @@
         "category": "development",
         "shortDescription": "",
         "datePeriod": "Jan 2025 - Mar 2025",
-        "longDescription": "",
+        "longDescription": "Inspired by Ebbinghaus's forgetting curve, our solution strategically fights memory decay through increasing intervals of active recall and feedback, turning the natural decline into lasting retention and memory stability. EchoHaus allows users to create their own accounts and stores their uploaded notes in a MongoDB database. Users can then experience and experiment with the study method of waiting, recalling, and repeating the previous steps. A unique graph is generated for each note, displaying the 'forgetting curve' associated with that note.",
         "github": "https://github.com/fionaleungg/EchoHaus",
+        "technologies": "React, MongoDB, Express, Node.js, JavaScript, HTML/CSS, Git",
         "imageSrc": "/images/echohaus_develop.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://github.com/fionaleungg/EchoHaus"
       },
       {
         "id": "6",
@@ -98,10 +116,11 @@
         "category": "development",
         "shortDescription": "",
         "datePeriod": "Jan 2025 - Mar 2025",
-        "longDescription": "",
+        "longDescription": "A roommate coordination application allows users to create an account, log in, and join or create a household with others. Users can set a visible status, view their assigned weekly chores on the home page, access a full list of chores on a separate page, and receive automatic new assignments each week. The app also includes an events feature that lets users create and view events on a shared calendar, helping streamline household organization.",
         "github": "https://github.com/yureinon/individually-wrapped",
+        "technologies": "React, MongoDB, Express, Node.js, JavaScript, HTML/CSS, Git",
         "imageSrc": "/images/indiwrap_develop.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://github.com/yureinon/individually-wrapped"
       },
       {
         "id": "7",
@@ -110,10 +129,11 @@
         "category": "development",
         "shortDescription": "",
         "datePeriod": "Jan 2025 - Mar 2025",
-        "longDescription": "",
+        "longDescription": "A simple multithreaded HTTP server listens on a specified port and uses a configurable number of threads (defaulting to four) to handle multiple client requests concurrently. When launched with the command ./httpserver -t (number of threads) (port number), the server creates a thread pool that allows it to efficiently accept and process incoming HTTP connections in parallel, improving responsiveness compared to a single-threaded server.",
         "github": "https://github.com/fionaleungg/multithreaded-http-server",
-        "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?auto=format&fit=crop&w=400&q=60",
-        "url": "http://chetanverma.com/"
+        "technologies": "C, Git",
+        "imageSrc": "/images/multithread_http_server.png",
+        "url": "https://github.com/fionaleungg/multithreaded-http-server"
       },
       {
         "id": "15",
@@ -122,10 +142,10 @@
         "category": "design",
         "shortDescription": "Articles, Blogs, Contact Pages",
         "datePeriod": "Jan 2025 - Mar 2025",
-        "longDescription": "",
+        "longDescription": "C, Git",
         "figma": "https://www.figma.com/design/QdC5o5HjlsJygvnakznEI2/Gallows-Webpages?node-id=0-1&t=LL06pT30Rp9fcp8E-1",
         "imageSrc": "/images/gallows_design.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://www.figma.com/design/QdC5o5HjlsJygvnakznEI2/Gallows-Webpages?node-id=0-1&t=LL06pT30Rp9fcp8E-1"
       },
       {
         "id": "16",
@@ -137,7 +157,7 @@
         "longDescription": "",
         "figma": "https://www.figma.com/design/MwwcYaVg7b0QSxzIEgSd5S/Road-Buddy?node-id=96-138&t=nc9eHeaf9VILgq9X-1",
         "imageSrc": "/images/roadbuddy_design.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://www.figma.com/design/MwwcYaVg7b0QSxzIEgSd5S/Road-Buddy?node-id=96-138&t=nc9eHeaf9VILgq9X-1"
       },
       {
         "id": "17",
@@ -149,7 +169,7 @@
         "longDescription": "",
         "figma": "https://www.figma.com/design/29nyiTumOsA5KzKEtCrTGs/EchoHaus?node-id=0-1&t=8CiORCwz1zmHFQNT-1",
         "imageSrc": "/images/echohaus_design.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://www.figma.com/design/29nyiTumOsA5KzKEtCrTGs/EchoHaus?node-id=0-1&t=8CiORCwz1zmHFQNT-1"
       },
       {
         "id": "18",
@@ -161,7 +181,7 @@
         "longDescription": "",
         "figma": "https://www.figma.com/design/PG3VQ2WiWnX8I4tZVFJmtt/Individually-Wrapped?t=8CiORCwz1zmHFQNT-1",
         "imageSrc": "/images/indiwrap_design.png",
-        "url": "http://chetanverma.com/"
+        "url": "https://www.figma.com/design/PG3VQ2WiWnX8I4tZVFJmtt/Individually-Wrapped?t=8CiORCwz1zmHFQNT-1"
       }
     ],
   
@@ -218,7 +238,7 @@
       },
   
       "languages": ["Javascript", "HTML5", "CSS", "Python", "Go"],
-      "frameworks": ["React", "Typescript", "NodeJs"],
+      "frameworks": ["React", "TypeScript", "NodeJs"],
       "others": ["Figma", "AdobeXD", "AWS"]
     }
   }

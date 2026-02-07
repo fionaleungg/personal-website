@@ -74,7 +74,7 @@ export default function Home() {
       {data.showCursor && <Cursor />}
 
       <Head>
-        <title>{data.name}</title>
+        <title>Fiona Leung</title>
       </Head>
 
       {/* <div className="gradient-circle"></div>
@@ -197,7 +197,7 @@ export default function Home() {
       </div>
 
       {/* Rest of page stays constrained */}
-      <div className="container mx-auto mb-10">
+      <div className="container mx-auto">
 
         {/* About Section */}
         <div className="mt-10 laptop:mt-20 p-2 laptop:p-0" ref={aboutRef}>
@@ -335,7 +335,7 @@ export default function Home() {
 
 
       {/* Footer stays constrained */}
-      <div className="container mx-auto mb-10">
+      <div className="container mx-auto">
         <Footer />
       </div>
     </div>

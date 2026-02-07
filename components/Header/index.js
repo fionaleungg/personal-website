@@ -20,8 +20,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
-      {/* Mobile Header */}
-      <div className="fixed left-0 right-0 top-0 z-20 block tablet:hidden">
+      {/* Mobile Header - z-30 so dropdown sits above hero frames & butterflies (z-20) */}
+      <div className="fixed left-0 right-0 top-0 z-30 block tablet:hidden">
         <Popover className="w-full bg-[#d4cdc7]">
           {({ open }) => (
             <>
@@ -76,8 +76,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </div>
 
               <Popover.Panel
-                className={`absolute right-0 z-10 w-full p-4 ${
-                  theme === "dark" ? "bg-slate-800" : "bg-[#d4cdc7]"
+                className={`absolute right-0 z-30 w-full p-4 ${
+                  theme === "dark" ? "bg-[#80756a]" : "bg-[#d4cdc7]"
                 } shadow-md rounded-md`}
               >
                 {!isBlog ? (
@@ -102,7 +102,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       </div>
 
       {/* Desktop Header */}
-      <div className="fixed left-0 right-0 top-0 z-20 hidden tablet:flex">
+      <div className="fixed left-0 right-0 top-0 z-30 hidden tablet:flex">
         <div className="w-full bg-[#d4cdc7] px-6 py-4 flex items-center justify-between">
           <div
             onClick={() => router.push("/")}

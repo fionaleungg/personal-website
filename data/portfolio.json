@@ -1,7 +1,7 @@
 {
     "name": "Fiona",
     "headerTaglineOne": "Hello!",
-    "headerTaglineTwo": "I'm Fiona Leung - a",
+    "headerTaglineTwo": "a",
     "headerTaglineThree": "developer and designer",
     "headerTaglineFour": " based in San Francisco, California.",
     "showCursor": true,
@@ -14,19 +14,19 @@
         "id": "1",
         "title": "Github",
         "link": "https://github.com/chetanverma16",
-        "icon": "/images/bird.png"
+        "icon": "/images/github.png"
       },
       {
         "id": "2",
         "title": "LinkedIn",
         "link": "https://www.linkedin.com/in/chetanverma7/",
-        "icon": "/images/butterfly.png"
+        "icon": "/images/linkedin.png"
       },
       {
         "id": "3",
         "title": "Email",
         "link": "mailto:fionaleung1134@gmail.com",
-        "icon": "/images/heart.png"
+        "icon": "/images/email.png"
       }
     ],
   

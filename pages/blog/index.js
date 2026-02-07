@@ -14,14 +14,12 @@ const Work = () => {
   const [mounted, setMounted] = useState(false);
 
   const developmentProjects = useMemo(
-    () =>
-      data.projects.filter((project) => project.category === "development"),
+    () => data.projects.filter((project) => project.category === "development"),
     []
   );
 
   const designProjects = useMemo(
-    () =>
-      data.projects.filter((project) => project.category === "design"),
+    () => data.projects.filter((project) => project.category === "design"),
     []
   );
 
@@ -43,15 +41,16 @@ const Work = () => {
 
   const WorkSection = ({ title, projects }) => {
     if (!projects || projects.length === 0) return null;
+  
     return (
-      <div className="mt-12">
-        <h2 className="ml-0 tablet:ml-4 text-2xl text-bold">{title}.</h2>
-        <div className="mt-6 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
+      <div className="mt-12 text-white">
+        <h2 className="ml-0 tablet:ml-4 text-2xl font-bold">
+          {title}.
+        </h2>
+  
+        <div className="mt-6 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-10">
           {projects.map((project) => (
-            <div
-              className="relative"
-              key={project.id}
-            >
+            <div className="relative" key={project.id}>
               <div
                 className="cursor-pointer"
                 onClick={() => handleCardClick(project.url)}
@@ -61,18 +60,34 @@ const Work = () => {
                   src={project.imageSrc}
                   alt={project.title}
                 />
-                <h3 className="mt-5 text-3xl">{project.title}</h3>
+  
+                <h3 className="mt-5 text-3xl font-semibold text-white">
+                  {project.title}
+                </h3>
+  
                 {project.datePeriod && (
-                  <p className="mt-2 text-sm opacity-50">{project.datePeriod}</p>
+                  <p className="mt-2 text-sm text-white/70">
+                    {project.datePeriod}
+                  </p>
                 )}
+  
                 {project.shortDescription && (
-                  <p className="mt-2 opacity-50 text-lg">{project.shortDescription}</p>
+                  <p className="mt-2 text-lg text-white/80">
+                    {project.shortDescription}
+                  </p>
                 )}
-                <p className="mt-2 opacity-50 text-lg">{project.description}</p>
+  
+                <p className="mt-2 text-lg text-white/80">
+                  {project.description}
+                </p>
+  
                 {project.longDescription && (
-                  <p className="mt-3 opacity-70 text-base leading-relaxed">{project.longDescription}</p>
+                  <p className="mt-3 text-base leading-relaxed text-white/90">
+                    {project.longDescription}
+                  </p>
                 )}
               </div>
+  
               <div className="mt-4 flex gap-4">
                 {project.category === "development" && project.github && (
                   <a
@@ -80,18 +95,19 @@ const Work = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="text-sm opacity-70 hover:opacity-100 underline"
+                    className="text-sm text-white/70 hover:text-white underline"
                   >
                     GitHub
                   </a>
                 )}
+  
                 {project.category === "design" && project.figma && (
                   <a
                     href={project.figma}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="text-sm opacity-70 hover:opacity-100 underline"
+                    className="text-sm text-white/70 hover:text-white underline"
                   >
                     Figma
                   </a>
@@ -103,34 +119,39 @@ const Work = () => {
       </div>
     );
   };
+  
 
   return (
     showWork.current && (
-      <>
+      <div
+        className={`bg-[#bfb6ad] min-h-screen text-white ${
+          data.showCursor && "cursor-none"
+        }`}
+      >
         {data.showCursor && <Cursor />}
+  
         <Head>
           <title>Work</title>
         </Head>
-        <div
-          className={`container mx-auto mb-10 ${
-            data.showCursor && "cursor-none"
-          }`}
-        >
-          <Header isBlog={true}></Header>
-          <div className="mt-10">
-            <h1
-              ref={text}
-              className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
-            >
-              Work.
-            </h1>
-            <WorkSection title="Development" projects={developmentProjects} />
-            <WorkSection title="Design" projects={designProjects} />
-          </div>
+  
+        {/* Header */}
+        <Header isBlog={true} />
+  
+        {/* Page content — padded to clear fixed header */}
+        <div className="container mx-auto pt-24 laptop:pt-28 mb-10">
+          <h1
+            ref={text}
+            className="mob:p-2 font-bold text-6xl laptop:text-8xl w-full"
+          >
+            Work.
+          </h1>
+  
+          <WorkSection title="Development" projects={developmentProjects} />
+          <WorkSection title="Design" projects={designProjects} />
         </div>
-      </>
+      </div>
     )
-  );
+  );  
 };
 
 export default Work;

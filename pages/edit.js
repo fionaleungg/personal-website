@@ -147,7 +147,7 @@ const Edit = () => {
   };
 
   return (
-    <div className={`container mx-auto ${data.showCursor && "cursor-none"}`}>
+    <div className={`container mx-auto`}>
       <Header isBlog></Header>
       {data.showCursor && <Cursor />}
       <div className="mt-10">

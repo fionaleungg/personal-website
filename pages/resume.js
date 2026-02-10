@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Cursor from "../components/Cursor";
 import Header from "../components/Header";
+import Link from "next/link";
 
 // Data
 import data from "../data/portfolio.json";
@@ -21,7 +22,7 @@ const Resume = () => {
   return (
     <div
       className={`bg-[#bfb6ad] min-h-screen ${
-        data.showCursor && "cursor-none"
+        ""
       }`}
     >
       {data.showCursor && <Cursor />}
@@ -45,11 +46,19 @@ const Resume = () => {
                 laptop:mb-16
               "
             />
-
-
           </div>
         )}
       </div>
+
+      {/* Footer text */}
+      <h1 className="mt-4 text-xs tablet:text-sm text-center opacity-80 w-full pb-5 laptop:pb-13">
+        Made With ❤ by{" "}
+        <Link href="https://www.linkedin.com/in/fiona-leung1134/">
+          <a className="underline underline-offset-2 hover:opacity-100 transition">
+            Fiona Leung
+          </a>
+        </Link>
+      </h1>
     </div>
   );
 };

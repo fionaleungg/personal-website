@@ -31,12 +31,15 @@ const Footer = ({}) => {
         </div>
       </div>
 
-      <h1 className="text-sm text-bold mt-1 laptop:mt-2 p-2 laptop:p-0">
+      <h1 className="mt-6 text-xs tablet:text-sm text-center opacity-80 w-full">
         Made With ❤ by{" "}
         <Link href="https://www.linkedin.com/in/fiona-leung1134/">
-          <a className="underline underline-offset-1">Fiona Leung</a>
+          <a className="underline underline-offset-2 hover:opacity-100 transition">
+            Fiona Leung
+          </a>
         </Link>
       </h1>
+
     </>
   );
 };

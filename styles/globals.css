@@ -101,3 +101,9 @@ body {
   object-fit: contain;
   display: block;
 }
+
+/* Hide default cursor only when custom cursor is active (desktop) */
+body.custom-cursor-active,
+body.custom-cursor-active * {
+  cursor: none !important;
+}

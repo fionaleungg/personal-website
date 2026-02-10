@@ -70,7 +70,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative bg-[#bfb6ad]`}>
+    <div className={`relative ${data.showCursor && "cursor-none"} bg-[#bfb6ad]`}>
       {data.showCursor && <Cursor />}
 
       <Head>

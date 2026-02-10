@@ -52,7 +52,7 @@ export default function Home() {
   useEffect(() => {
     if (!typedRef.current) return;
     const typed = new Typed(typedRef.current, {
-      strings: ["Curious", "Strategic", "Inventive"],
+      strings: ["Curious", "Strategic", "Detail-oriented"],
       typeSpeed: 60,
       backSpeed: 40,
       backDelay: 1200,
@@ -86,9 +86,9 @@ export default function Home() {
   />
 
   {/* Overlay content */}
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center pointer-events-none">
+  <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center pointer-events-none">
     {/* Bunny */}
-    <div className="w-[8vw] max-w-[60px] tablet:w-[12vw] tablet:max-w-[120px] laptop:max-w-[150px] mb-0">
+    <div className="w-[12vw] max-w-[100px] tablet:w-[12vw] tablet:max-w-[140px] laptop:max-w-[170px] mb-4">
       <img
         src="/images/bunny.png"
         alt="Bunny"
@@ -104,7 +104,6 @@ export default function Home() {
         className="w-full h-auto object-contain"
       />
     </div>
-
 
     {/* Taglines */}
     <div className="mt-0 space-y-1 leading-tight text-center">
@@ -132,7 +131,7 @@ export default function Home() {
     </div>
 
     {/* Butterfly */}
-    <div className="w-[6vw] max-w-[50px] tablet:w-[12vw] tablet:max-w-[120px] laptop:max-w-[120px] mt-8">
+    <div className="w-[10vw] max-w-[40px] tablet:w-[12vw] tablet:max-w-[80px] laptop:max-w-[120px] mt-4 tablet:mt-8 laptop:mt-10">
       <img
         src="/images/butterfly_pixel.png"
         alt="Butterfly"
@@ -141,8 +140,8 @@ export default function Home() {
     </div>
   </div>
 
-  {/* Left frame (mirrored) */}
-  <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-[20vw] max-w-[240px] tablet:max-w-[320px] laptop:max-w-[400px]">
+  {/* Left frame (mirrored) - responsive; shifted down slightly */}
+  <div className="absolute left-0 top-[52%] -translate-y-1/2 z-20 w-[52px] mob:w-[64px] tablet:w-[155px] laptop:w-[220px] laptopl:w-[260px] max-w-[90vw]">
     <img
       src="/images/frame.png"
       alt="Left frame"
@@ -151,14 +150,16 @@ export default function Home() {
   </div>
 
   {/* Right frame */}
-  <div className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-[20vw] max-w-[240px] tablet:max-w-[320px] laptop:max-w-[400px]">
+  <div className="absolute right-0 top-[52%] -translate-y-1/2 z-20 w-[52px] mob:w-[64px] tablet:w-[155px] laptop:w-[220px] laptopl:w-[260px] max-w-[90vw]">
     <img
       src="/images/frame.png"
       alt="Right frame"
       className="w-full h-auto object-contain"
     />
   </div>
+
 </div>
+
 
 
       {/* Socials */}

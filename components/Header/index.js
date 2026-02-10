@@ -3,7 +3,6 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
-import Image from "next/image";
 // Local Data
 import data from "../../data/portfolio.json";
 
@@ -20,7 +19,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
-      {/* Mobile Header - z-30 so dropdown sits above hero frames & butterflies (z-20) */}
+      {/* Mobile Header */}
       <div className="fixed left-0 right-0 top-0 z-30 block tablet:hidden">
         <Popover className="w-full bg-[#d4cdc7]">
           {({ open }) => (
@@ -31,13 +30,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   className="cursor-pointer flex items-center"
                 >
                   <div className="w-10 h-10 relative">
-                    <Image
+                    <img
                       src="/images/f_logo.png"
                       alt="F Logo"
-                      width={40}
-                      height={40}
                       className="w-full h-full object-contain"
-                      priority
                     />
                   </div>
                 </div>
@@ -109,13 +105,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             className="cursor-pointer flex items-center"
           >
             <div className="w-12 h-12 relative">
-              <Image
+              <img
                 src="/images/f_logo.png"
                 alt="F Logo"
-                width={48}
-                height={48}
                 className="w-full h-full object-contain"
-                priority
               />
             </div>
           </div>

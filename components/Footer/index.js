@@ -1,7 +1,6 @@
 import React from "react";
 import Socials from "../Socials";
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = ({}) => {
   return (
@@ -12,13 +11,10 @@ const Footer = ({}) => {
             {/* Let's Connect image - centered */}
             <div className="flex justify-center mb-6">
               <div className="w-[60%] max-w-[500px] tablet:max-w-[600px] laptop:max-w-[700px]">
-                <Image
+                <img
                   src="/images/letsconnect.png"
                   alt="Let's Connect"
-                  width={700}
-                  height={150}
                   className="w-full h-auto object-contain"
-                  priority
                 />
               </div>
             </div>
@@ -39,7 +35,6 @@ const Footer = ({}) => {
           </a>
         </Link>
       </h1>
-
     </>
   );
 };

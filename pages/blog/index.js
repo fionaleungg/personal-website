@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { stagger } from "../../animations";
@@ -53,11 +52,9 @@ const Work = () => {
       <div className="mt-14 text-white">
         {/* Section Title Image */}
         <div className={sizeClasses}>
-          <Image
+          <img
             src={titleImage}
             alt={alt}
-            width={420}
-            height={110}
             className="w-full h-auto object-contain"
           />
         </div>
@@ -105,9 +102,7 @@ const Work = () => {
                 {project.category === "development" &&
                   project.technologies && (
                     <p className="mt-3 text-sm laptop:text-base text-white/80">
-                      <span className="font-semibold">
-                        Technologies Used:
-                      </span>{" "}
+                      <span className="font-semibold">Technologies Used:</span>{" "}
                       {project.technologies}
                     </p>
                   )}
@@ -148,11 +143,7 @@ const Work = () => {
 
   return (
     showWork.current && (
-      <div
-        className={`bg-[#bfb6ad] min-h-screen text-white ${
-          ""
-        }`}
-      >
+      <div className={`bg-[#bfb6ad] min-h-screen text-white`}>
         {data.showCursor && <Cursor />}
 
         <Head>
@@ -162,31 +153,19 @@ const Work = () => {
         <Header isBlog={true} />
 
         {/* PAGE CONTENT */}
-        <div
-          className="
-            container
-            mx-auto
-            pt-24 laptop:pt-28
-            pb-6 laptop:pb-10
-            px-6
-            tablet:px-10
-            laptop:px-0
-          "
-        >
-          {/* WORK TITLE */}
+        <div className="container mx-auto pt-24 laptop:pt-28 pb-6 laptop:pb-10 px-6 tablet:px-10 laptop:px-0">
+         {/* WORK TITLE */}
           <div
             ref={text}
-            className="mob:p-2 mx-auto w-[60%] max-w-[420px] tablet:max-w-[480px] laptop:max-w-[520px] text-center"
+            className="mob:p-2 mx-auto w-[50%] max-w-[220px] tablet:max-w-[280px] laptop:max-w-[320px] text-center mb-10 laptop:mb-20"
           >
-            <Image
+            <img
               src="/images/work_title.png"
               alt="Work"
-              width={520}
-              height={120}
               className="w-full h-auto object-contain"
-              priority
             />
           </div>
+
 
           {/* Sections */}
           <WorkSection

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import yourData from "../../data/portfolio.json";
 
 const Socials = () => {
@@ -15,12 +14,10 @@ const Socials = () => {
           >
             {/* Icons — desktop only */}
             <div className="hidden laptop:block p-1 rounded-full hover:hover:bg-pink-400/30 transition-colors">
-              <Image
+              <img
                 src={social.icon}
                 alt={social.title}
-                width={90}
-                height={70}
-                className="w-14 h-14"
+                className="w-17 h-14"
               />
             </div>
 

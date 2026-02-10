@@ -6,11 +6,11 @@ const WorkCard = ({ img, name, description, onClick }) => {
       className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link flex flex-col h-full"
       onClick={onClick}
     >
-      {/* Image container with responsive aspect ratio */}
-      <div className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 w-full aspect-video mob:aspect-[3/2] laptop:aspect-[16/9] flex-shrink-0">
+      {/* Image container with responsive aspect ratio - group so hover on container zooms image */}
+      <div className="group relative rounded-lg overflow-hidden">
         <img
           alt={name}
-          className="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300"
+          className="absolute inset-0 w-full h-full object-cover"
           src={img}
         />
       </div>

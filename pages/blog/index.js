@@ -62,16 +62,18 @@ const Work = () => {
         {/* Projects Grid */}
         <div className="mt-6 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-10">
           {projects.map((project) => (
-            <div className="relative" key={project.id}>
+            <div className="relative overflow-visible" key={project.id}>
               <div
-                className="cursor-pointer"
+                className="cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.03]"
                 onClick={() => handleCardClick(project.url)}
               >
-                <img
-                  className="w-full h-60 rounded-lg shadow-lg object-cover"
-                  src={project.imageSrc}
-                  alt={project.title}
-                />
+                <div className="rounded-lg overflow-hidden block">
+                  <img
+                    className="w-full h-60 rounded-lg shadow-lg object-cover transition-transform duration-300 ease-out hover:scale-110"
+                    src={project.imageSrc}
+                    alt={project.title}
+                  />
+                </div>
 
                 <h3 className="mt-5 text-3xl laptop:text-4xl font-semibold text-white">
                   {project.title}
